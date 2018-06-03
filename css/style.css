@@ -1,0 +1,292 @@
+:root{
+    --primarycolor: #7C9EB9;
+    --subcolor1: #2D5570;
+    --fontcolor: #F1EDF4;
+}
+
+html{
+    background-color: var(--primarycolor);
+    width: 100%;
+}
+
+hr {
+    width: 80%;
+    border: 0.8px solid black;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+};
+
+.myphoto {
+    grid-area: myphoto;
+
+};
+
+.myinfo {
+    grid-area: myinfo;
+
+};
+
+.mynav {
+    grid-area: mynav;
+}
+
+#groupphoto {
+    float: left;
+    margin-left: 3px;
+    
+}
+
+.myinfo h3 .name{
+    font-size:22px;
+    font-weight: normal;
+    transform: rotate(357deg);
+    color: #443324;
+	display: block;
+    padding:12px 0 0px 0;
+    text-align: center;
+}
+
+.myinfo .name:hover {
+    font-size: 25px;
+    color: var(--fontcolor);
+}
+
+.myinfo .detail1 {
+    font-size:20px;
+    font-weight: 300;
+    text-decoration: underline;
+    transform: rotate(357deg);
+	letter-spacing: 1.6px;
+	display: block;
+	padding:10px 0 15px 0;
+    color:#00361F;
+    text-align: center;
+}
+
+.myinfo .detail1:hover{
+    font-size: 25px;
+    color: var(--fontcolor);
+}
+
+.myinfo .detail2 {
+    font-size:16px;
+    font-weight: 300;
+    transform: rotate(357deg);
+	letter-spacing: 1.6px;
+	display: block;
+	padding:7px 0 13px 0;
+    color: #00371E;
+    text-align: center;
+}
+
+.myinfo .detail2:hover {
+    font-size: 25px;
+    color: var(--fontcolor);
+}
+
+.nav{
+    background-color: var(--subcolor1);
+    text-align: center;
+    margin: 1px;
+    padding: 1px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+.navli {
+    list-style: none;
+    display: inline;
+    margin: 80px;
+    font-size: 23px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--fontcolor);
+    padding: 6px;
+    border: 2px solid black;
+    border-radius: 25%;
+};
+
+.container1{
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:    "header header"
+                            "mynav mynav"
+                            "aboutme aboutme"
+                            "myphoto myinfo";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.hobbyheader {
+    grid-area: hobbyheader;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h2:hover{
+    font-size: 60px;
+    text-decoration: underline;
+}
+
+.hobbies{
+    text-align: center;
+}
+
+.lists{
+    margin-left: 20px;
+}
+
+.songs{
+    text-decoration: underline;
+    color: black;
+}
+
+.abouthobbies {
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.hobbyabout {
+    grid-area: hobbyabout;
+}
+
+.hobbyicons{
+    color: #00364D;
+    padding: 2px;
+}
+
+.hobbyphoto {
+    grid-area: hobbyphoto;
+}
+
+img.hobbyphotos{
+    width: 230px;
+    height: 220px;
+}
+
+.container2{
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:    "hobbyheader hobbyheader"
+                            "hobbyabout hobbyphoto"
+                            "hobbyabout hobbyphoto";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+.foodheader {
+    grid-area: foodheader;
+}
+
+.foodphotos {
+    margin: 25px;
+    border-radius: 40%;
+}
+
+h5{
+    font-size: 40px;
+    text-align: center;
+}
+
+.fooddes {
+    text-align: center;
+    font-size: 20px;
+}
+
+.foodleft {
+    grid-area: foodleft;
+}
+
+
+.foodright {
+    grid-area: foodright;
+}
+
+.food{
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:    "foodheader foodheader"
+                            "foodleft foodright";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.05fr 1fr;
+}
+
+
+#lifeheader{
+    color: black;
+    margin-bottom: -80px;
+}
+
+.lifetable{
+    border: 0px;
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    border-collapse: separate;
+    margin:100px auto;
+    color: black;
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+    padding: 20px;
+}
+
+.tobecome {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.sns{
+    text-align: center;
+}
+
+.myfacebook{
+    color: #4A82F7;
+}
+
+.mytwitter{
+    color: #47A0EC;
+}
+
+.myinstagram{
+    color: #B73F8F;
+}
+#footer{
+    text-align: center;
+}
+
+.totop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: inline;
+    margin: 0;
+}
+.totop a {
+	display:block;
+	text-decoration:none;
+}
+.totop img {
+	background:#000;
+}
+.totop img:hover {
+	background:#333;
+}
