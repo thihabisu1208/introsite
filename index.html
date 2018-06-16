@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>自己紹介サイト</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/icono.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.pagetop.js"></script>
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="container1">
-        <div class="header">
-            <h1><img src="images/mainheader.png" alt="header"></h1>
-        </div>
         <div class="mynav">
-            <nav class="nav">
+            <nav class="nav" id="navigation">
                 <ul class="navul">
                     <li class="navli"><a href="#about">テイハは</a></li>
                     <li class="navli"><a href="#hobby">趣味</a></li>
                     <li class="navli"><a href="#food">好きな食べ物</a></li>
                     <li class="navli"><a href="#life">人生</a></li>
-                    <li class="navli"><a href="#want">目標</a></li>
+                    <li class="navli"><a href="#family">家族</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="header">
+            <h1 data-heading="Thiha Ht">Thiha Htun Naing</h1>
+        </div>
+        
             <div id="about" class="aboutme">
                 <h2>テイハって</h2>
             </div>
@@ -58,11 +57,14 @@
                 <div class="hobbyabout">
                     <h3 class="hobbies">音楽を聴くこと <i class="icono-music hobbyicons"></i></h3>
                     <p class="abouthobbies">小さい頃から母国の曲をずっと聞いてて、それから アメリカ、中国や韓国の曲も気になって来た。今は 日本の曲が一番好きで 毎日聴いてます！</p>
-                    <h4 class="lists">日本の好きなアーティスト</h4>
-                    <ul>
+                    <h4 id="artist-header" class="lists">日本の好きなアーティスト</h4>
+                    <ul class="artistul">
                         <li>back number <a class="songs" href="https://www.youtube.com/watch?v=LgLMA1MR7iE" target="_blank">(高嶺の花子さん)</a></li>
+                        <li class="artist-photos"><a href="http://backnumber.info/" target="_blank"><img src="images/bn.jpg"></a></li>
                         <li>GReeeeN <a class="songs" href="https://www.youtube.com/watch?v=DwTinTO0o9I" target="_blank">(キセキ)</a></li>
+                        <li class="artist-photos"><a href="http://greeeen.co.jp/" target="_blank"><img src="images/gn.jpg" alt=""></a></li>
                         <li>米津玄師 <a class="songs" href="https://www.youtube.com/watch?v=SX_ViT4Ra7k" target="_blank">(Lemon)</a></li>
+                        <li class="artist-photos"><a href="http://reissuerecords.net/" target="_blank"><img src="images/ky.jpeg" alt=""></a></li>
                     </ul>
                     <h3 class="hobbies">アニメ、映画やドラマを見ること <i class="icono-macbook hobbyicons"></i></h3>
                     <p class="abouthobbies">6年前ごろにアニメを初めて知ってて、それが 今、日本にいることのきっかけになったんだよね。アニメから日本の映画やドラマも見ることになって、全部好きになった！</p>
@@ -103,18 +105,18 @@
             <div class="foodleft">
                 <h5>麻婆豆腐</h5>
                 <p class="fooddes">麻婆豆腐 大いいいいいすき！家でも週３回ぐらい作って食べてる！</p>
-                <img id="mabotofu" class="foodphotos" src="images/mabotofu.jpg" alt="mabotofu">
+                <img id="mabotofu" class="foodphotos" src="images/food/mabotofu.jpg" alt="mabotofu">
                 <h5>お好み焼き</h5>
                 <p class="fooddes">大阪風も 広島風も好きなんだよ！</p>
-                <img id="okonomiyaki" class="foodphotos" src="images/okonomiyaki.jpg" alt="okonomiyaki">
+                <img id="okonomiyaki" class="foodphotos" src="images/food/okonomiyaki.jpg" alt="okonomiyaki">
             </div>
             <div class="foodright">
                 <h5>カツ丼</h5>
                 <p class="fooddes">かつ屋のカツ丼最高！</p>
-                <img id="katsudon" class="foodphotos" src="images/katsudon.jpg" alt="katsudon">
+                <img id="katsudon" class="foodphotos" src="images/food/katsudon.jpg" alt="katsudon">
                 <h5>焼肉</h5>
                 <p class="fooddes">焼肉は 当たり前だよね！</p>
-                <img id="yakiniku" class="foodphotos" src="images/yakiniku.jpg" alt="yakiniku">
+                <img id="yakiniku" class="foodphotos" src="images/food/yakiniku.jpg" alt="yakiniku">
             </div>
         </div>
         <hr>
@@ -122,16 +124,19 @@
             <h2 id="lifeheader">人生</h2>
             <table class="lifetable">
                 <tr>
-                    <th>年</th>
-                    <th>起こったこと</th>
+                    <th class="thead">西暦</th>
+                    <th class="thead">出来事</th>
+                    <th class="thead">年代</th>
                 </tr>
                 <tr>
                     <td>1997年</td>
                     <td>生まれ</td>
+                    <td>クソ人生の始まり</td>
                 </tr>
                 <tr>
                     <td>2001年</td>
                     <td>小学校始まり</td>
+                    <td rowspan="4">母国学生時代</td>
                 </tr>
                 <tr>
                     <td>2005年</td>
@@ -148,6 +153,7 @@
                 <tr>
                     <td>2016年</td>
                     <td>日本語学校始まり</td>
+                    <td rowspan="2">日本学生時代 （つらっ！）</td>
                 </tr>
                 <tr>
                     <td>2018年</td>
@@ -156,11 +162,54 @@
             </table>
         </div>
         <hr>
-        <div id="want" class="want">
-            <h2>目標</h2>
-            <p class="tobecome">
-                海賊王に俺はなる！
-            </p>
+        <div id="family">
+            <h2 class="familyheader">家族</h2>
+            <h3>大好きな家族 <br><span>すげえ 寂しい</span></h3>
+            <div class="family">
+                <div class="familyphotos">
+                    <img src="images/family/family1.jpg" alt="">
+                </div>
+                <div class="dadphoto">
+                    <img src="images/family/dad.jpg" alt="">
+                </div>
+                <div class="daddesc">
+                    <p>お父さん <br><span>世界一偉い人</span></p>
+                </div>
+                <div class="momphoto">
+                    <img src="images/family/mother.jpg" alt="">
+                </div>
+                <div class="momdesc">
+                    <p>お母さん <br><span> 大好き</span></p>
+                </div>
+                <div class="shwengwe">
+                    <img src="images/family/shwengwe.jpg" alt="">
+                </div>
+                <div class="shwengwedesc">
+                    <p>双子の妹 <br><span>嫌い</span></p>
+                </div>
+                <div class="shwephoto">
+                    <img src="images/family/shwe.jpg" alt="">
+                </div>
+                <div class="shwedesc">
+                    <p>双子での姉 <br><span>ブス１</span></p>
+                </div>
+                <div class="ngwepho">
+                    <img src="images/family/ngwe.jpg" alt="">
+                </div>
+                <div class="ngwedesc">
+                    <p>双子での妹 <br><span>ブス２</span></p>
+                </div>
+                <div class="kooophoto">
+                    <img src="images/family/kooo.jpg" alt="">
+                </div>
+                <div class="kooodesc">
+                    <p>兄貴 <br><span>ゲームマン</span></p>
+                </div>
+                <div class="siblings">
+                    <h3>きょうだい</h3>
+                    <img src="images/family/siblings.jpg" alt="">
+                </div>
+            </div>
         </div>
         <hr>
         <footer id="footer">
@@ -174,5 +223,10 @@
         <ul class="totop">
             <li class="totop"><a href="#"><img src="images/totop.png" width="42" height="42" alt="pageTop"></a></li>
         </ul>
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/jquery.pagetop.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
